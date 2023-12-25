@@ -27,26 +27,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-      dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    }
-    },
-}
-local opts = {}
-
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins")
 
 -- Load Telescope (Fuzzy Finder, etc)
 local builtin = require("telescope.builtin")
@@ -57,7 +38,6 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<C-t>', ':Neotree show toggle reveal <CR>', {}) -- Neotree Toggle
 vim.keymap.set('n', '<C-f>', ':Neotree focus<CR>', {}) -- Neotree focus
 vim.keymap.set('n', '<C-g>', ':Neotree git_status bottom toggle<CR>', {}) -- Neotree git
---vim.keymap.set('n', '<C-t>', ':Neotree filesystem reveal left<CR>', {})
 --vim.keymap.set('n', '<C-t>', ':Neotree filesystem reveal left<CR>', {})
 --vim.keymap.set('n', '<C-t>', ':Neotree filesystem reveal left<CR>', {})
 

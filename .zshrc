@@ -15,6 +15,7 @@ if [ -z "$TMUX" ];then
         for window_name dir in "${(@kv)WINDOW_DIRS}";do
             tmux new-window -t "$SESSION_NAME" -n "$window_name"
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $dir" C-m
+            tmux send-keys -t "$SESSION_NAME:$window_index.0" "clear" C-m
             ((window_index++))
         done
     fi

@@ -1,10 +1,21 @@
 if [ -z "$TMUX" ];then
     SESSION_NAME="Main"
-    WINDOW_NAMES=("Flask" "Jupyter" "Docker" "Postman" "NVIM" "Go" "Cyber")
+    declare -A WINDOW_DIRS=(
+        ["Flask"]="/home/$USER/Proyectos/BlueTeamHero"
+        ["Jupyter"]="/home/$USER/Proyectos/Jupyter"
+        ["Docker"]="/home/$USER/Proyectos/Docker"
+        ["Postman"]="/home/$USER/Tools/Postman"
+        ["NVIM"]="/home/$USER/.config/nvim"
+        ["Go"]="/home/$USER/Proyectos/programming/go"
+        ["Cyber"]="/home/$USER/Proyectos/Cyber"
+    )
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then
         tmux new-session -d -s "$SESSION_NAME" -n "Home"
-        for window_name in "${WINDOW_NAMES[@]}";do
+        window_index=1
+        for window_name in "${!WINDOW_DIRS[@]}";do
             tmux new-window -t "$SESSION_NAME" -n "$window_name"
+            tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd ${WINDOW_DIRS[$window_name]}" C-m
+            ((window_index++))
         done
     fi
     tmux attach-session -t "$SESSION_NAME"

@@ -12,9 +12,9 @@ if [ -z "$TMUX" ];then
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then
         tmux new-session -d -s "$SESSION_NAME" -n "Home"
         window_index=1
-        for window_name dir in "${(kv)WINDOW_DIRS}";do
+        for window_name in "${(k)WINDOW_DIRS}";do
             tmux new-window -t "$SESSION_NAME" -n "$window_name"
-            tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $dir" C-m
+            tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $WINDOW_DIRS[window_name]" C-m
             ((window_index++))
         done
     fi

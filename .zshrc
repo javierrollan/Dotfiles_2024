@@ -6,7 +6,7 @@ if [ -z "$TMUX" ];then
         ["Docker"]="/home/$USER/Proyectos/Docker"
         ["Postman"]="/home/$USER/Tools/Postman"
         ["NVIM"]="/home/$USER/.config/nvim"
-        ["Go"]="/home/$USER/Proyectos/programming/go"
+        ["Scripts"]="/home/$USER/Proyectos/Scripts"
         ["Cyber"]="/home/$USER/Proyectos/Cyber"
     )
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then

@@ -26,3 +26,5 @@ vim.cmd("set ttyfast")
 vim.cmd("set noswapfile")
 vim.cmd("set termguicolors")
 vim.g.mapleader = " "
+-- Key Remaps
+vim.keymap.set('n', 'C-n', ':tabnext<cr>')

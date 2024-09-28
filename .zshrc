@@ -16,15 +16,16 @@ if [ -z "$TMUX" ];then
             tmux new-window -t "$SESSION_NAME" -n "$window_name"
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $dir" C-m
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "clear" C-m
+            # Split Scripts Window in 3 panes and set working dir
             if [ $window_name = "Scripts" ];then
                 tmux select-window -t "$SESSION_NAME:$window_index.0"
                 tmux splitw -bf
                 tmux splitw -fh
                 tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $dir" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.0" "./file-sync.sh" C-m
-                tmux send-keys -t "$SESSION_NAME:$window_index.0" "clear" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.1" "htop" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.2" "cd $dir" C-m
+                tmux send-keys -t "$SESSION_NAME:$window_index.2" "clear" C-m
             fi
             ((window_index++))
         done

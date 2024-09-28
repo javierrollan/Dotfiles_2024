@@ -17,6 +17,7 @@ if [ -z "$TMUX" ];then
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $dir" C-m
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "clear" C-m
             if [ $window_name = "Scripts" ];then
+                tmux send-keys -t "$SESSION_NAME:$window_index.0" "echo 'hello Scripts!'" C-m
                 tmux splitw -bf C-m
                 tmux splitw -fh C-m
             fi

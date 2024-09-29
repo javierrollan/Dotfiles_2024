@@ -86,3 +86,4 @@ alias ls=/usr/bin/lsd
 alias cat=/usr/bin/batcat
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

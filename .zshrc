@@ -30,7 +30,7 @@ if [ -z "$TMUX" ];then
                 tmux send-keys -t "$SESSION_NAME:$window_index.2" "clear" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.3" "cd /home/$USER/Proyectos/BlueTeamHero" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.3" "clear" C-m
-                tmux send-keys -t "$SESSION_NAME:$window_index.3" "python app.py" C-m
+                tmux send-keys -t "$SESSION_NAME:$window_index.3" "flask run --host=192.168.1.51 --port=5000 --debug" C-m
             fi
             ((window_index++))
         done

@@ -28,4 +28,4 @@ vim.cmd("set termguicolors")
 vim.g.mapleader = " "
 -- Key Remaps
 vim.keymap.set('n', '<C-n>', ':tabnext<CR>')
-vim.keymap.set('n'. 'p', 'pgvy', { noremap = true, silent = true}) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 
+vim.keymap.set('n', 'p', 'pgvy', { noremap = true, silent = true}) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 

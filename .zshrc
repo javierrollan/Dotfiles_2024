@@ -87,3 +87,10 @@ alias cat=/usr/bin/batcat
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# fnm
+FNM_PATH="/home/javier/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/javier/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi

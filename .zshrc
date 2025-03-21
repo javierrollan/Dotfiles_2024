@@ -95,3 +95,6 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/javier/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+# kubectl
+source <(kubectl completion zsh)

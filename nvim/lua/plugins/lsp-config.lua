@@ -29,6 +29,9 @@ return {
             lspconfig.clangd.setup({
                 capabilities = capabilities,
             })
+            lspconfig.terraform_ls.setup({
+                capabilities = capabilities,
+            })
             lspconfig.gopls.setup({
                 capabilities = capabilities,
                 settings = {

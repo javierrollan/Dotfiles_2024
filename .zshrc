@@ -1,12 +1,12 @@
 if [ -z "$TMUX" ];then
     SESSION_NAME="Main"
      typeset -A WINDOW_DIRS=(
-        ["Flask"]="/home/$USER/Proyectos/BlueTeamHero"
-        ["Jupyter"]="/home/$USER/Proyectos/Jupyter"
-        ["Docker"]="/home/$USER/Proyectos/Docker"
+        ["Cribl"]="/home/$USER/Proyectos/Cyber/Cribl"
+        ["k8s-Cluster"]="/home/$USER/Proyectos/Cyber/kubernetes/k8s-proxmox"
+        ["Falco"]="/home/$USER/Proyectos/Cyber/Falco"
         ["Postman"]="/home/$USER/Tools/Postman"
         ["NVIM"]="/home/$USER/.config/nvim"
-        ["Scripts"]="/home/$USER/Proyectos/Scripts"
+        ["System"]="/home/$USER/Proyectos/Scripts"
         ["Cyber"]="/home/$USER/Proyectos/Cyber"
     )
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then
@@ -17,7 +17,7 @@ if [ -z "$TMUX" ];then
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $dir" C-m
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "clear" C-m
             # Split Scripts Window in 3 panes and set working dir
-            if [ $window_name = "Scripts" ];then
+            if [ $window_name = "System" ];then
                 tmux select-window -t "$SESSION_NAME:$window_index.0"
                 tmux splitw -bf
                 tmux splitw -fh
@@ -41,8 +41,6 @@ fi
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# This is another test 13
 
 export ZSH="$HOME/.oh-my-zsh"
 

@@ -63,6 +63,7 @@ source ~/.autoenv/activate.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 export AUTOENV_ENABLE_LEAVE=true
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/$HOME/go/bin
 
 # Faster pasting in console
 pasteinit() {

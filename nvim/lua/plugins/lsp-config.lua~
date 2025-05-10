@@ -32,6 +32,9 @@ return {
             lspconfig.terraformls.setup({
                 capabilities = capabilities,
             })
+            lspconfig.helm_ls.setup({
+                capabilities = capabilities,
+            })
             lspconfig.gopls.setup({
                 capabilities = capabilities,
                 settings = {

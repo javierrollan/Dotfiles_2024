@@ -25,4 +25,3 @@ vim.cmd("set cursorline")
 vim.cmd("set ttyfast")
 vim.cmd("set noswapfile")
 vim.cmd("set termguicolors")
--- Key Remaps

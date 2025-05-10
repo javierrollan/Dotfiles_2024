@@ -32,6 +32,17 @@ return {
             lspconfig.terraformls.setup({
                 capabilities = capabilities,
             })
+            lspconfig.ansiblels.setup({
+                capabilities = capabilities,
+                filetypes = {"yaml.ansible"},
+                settings = {
+                    ansible = {
+                        python = {
+                            interpreterPath = "python"
+                        }
+                    }
+                }
+            })
             lspconfig.helm_ls.setup({
                 capabilities = capabilities,
             })

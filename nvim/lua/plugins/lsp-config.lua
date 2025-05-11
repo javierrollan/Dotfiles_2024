@@ -34,7 +34,7 @@ return {
             })
             lspconfig.ansiblels.setup({
                 capabilities = capabilities,
-                filetypes = {"yaml"},
+                filetypes = {"yaml.ansible"},
                 settings = {
                     ansible = {
                         ansible = {

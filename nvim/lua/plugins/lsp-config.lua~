@@ -34,14 +34,26 @@ return {
             })
             lspconfig.ansiblels.setup({
                 capabilities = capabilities,
-                filetypes = {"yaml.ansible"},
+                filetypes = {"yaml"},
                 settings = {
                     ansible = {
+                        ansible = {
+                            path = "ansible",
+                            useFullyQualifiedCollectionNames = true
+                        },
+                        ansibleLint = {
+                            enabled = true,
+                            path = "ansible-lint"
+                        },
                         python = {
                             interpreterPath = "python"
-                        }
-                    }
-                }
+                        },
+                        completion = {
+                            provideRedirectModules = true,
+                            provideModuleOptionAliases = true
+                        },
+                    },
+                },
             })
             lspconfig.helm_ls.setup({
                 capabilities = capabilities,

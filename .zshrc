@@ -97,6 +97,6 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 # kubectl
-source <(loggen completion)
+source <(loggen completion zsh)
 source <(kubectl completion zsh)
 source <(helm completion zsh)

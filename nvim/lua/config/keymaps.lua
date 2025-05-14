@@ -10,7 +10,7 @@ vim.keymap.set('n', '>', '>gv')
 
 
 -- Remap Move -------------------------------------------------------------------------------------------------------------------
-vim.keymap.set('n', '<M-k>', ':move -1<CR>==')
+--vim.keymap.set('n', '<M-k>', ':move -1<CR>==')
 
 -- Modify yank ------------------------------------------------------------------------------------------------------------------
 vim.keymap.set('n', 'p', 'pgvy', { noremap = true, silent = true}) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 

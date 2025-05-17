@@ -19,7 +19,8 @@ keymap.set('n', '<C-j>', ':move +1<CR>') -- move line down
 keymap.set('n', '<C-k>', ':move -2<CR>') -- move line up
 keymap.set('n', '<leader>h', '<C-w>h', opts) -- move line up
 keymap.set('n', '<leader>l', '<C-w>l', opts) -- move line up
-keymap.set('n', '<leader>qq', ':wa', opts) -- move line up
+keymap.set('n', '<leader>q', ':wq<CR>', opts) -- move line up
+keymap.set('n', '<leader>qq', ':wqa<CR>', opts) -- move line up
 
 -- Modify yank ------------------------------------------------------------------------------------------------------------------
 keymap.set('n', 'p', 'pgvy', opts) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 

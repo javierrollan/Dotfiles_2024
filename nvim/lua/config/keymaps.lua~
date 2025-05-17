@@ -21,4 +21,4 @@ keymap.set('n', '<leader>h', '<C-w>h', opts) -- move line up
 keymap.set('n', '<leader>l', '<C-w>l', opts) -- move line up
 
 -- Modify yank ------------------------------------------------------------------------------------------------------------------
-keymap.set('n', 'p', 'pgvy', { noremap = true, silent = true}) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 
+keymap.set('n', 'p', 'pgvy', opts) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 

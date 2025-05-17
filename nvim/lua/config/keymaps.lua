@@ -1,21 +1,24 @@
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 -- Key Remaps -------------------------------------------------------------------------------------------------------------------
-vim.keymap.set('n', '<C-n>', ':tabnext<CR>') -- Next Tab
-vim.keymap.set('n', '<C-m>', ':tabprevious<CR>') -- Previous Tab
-vim.keymap.set('n', '<leader>t', ':Neotree toggle<CR>')
-vim.keymap.set('n', '<leader>f', ':Neotree action=focus<CR>')
+keymap.set('n', '<C-n>', ':tabnext<CR>') -- Next Tab
+keymap.set('n', '<C-m>', ':tabprevious<CR>') -- Previous Tab
+keymap.set('n', '<leader>t', ':Neotree toggle<CR>')
+keymap.set('n', '<leader>f', ':Neotree action=focus<CR>')
 
 -- Indent -----------------------------------------------------------------------------------------------------------------------
-vim.keymap.set('n', '<', '<gv')
-vim.keymap.set('n', '>', '>gv')
+keymap.set('n', '<', '<gv')
+keymap.set('n', '>', '>gv')
 
 -- Indent -----------------------------------------------------------------------------------------------------------------------
-vim.keymap.set('n', '<leader>sv', ':vsplit<CR>')
-vim.keymap.set('n', '<leader>sh', ':split<CR>')
+keymap.set('n', '<leader>sv', ':vsplit<CR>', opts)
+keymap.set('n', '<leader>sh', ':split<CR>', opts)
 
 -- Remap Move -------------------------------------------------------------------------------------------------------------------
-vim.keymap.set('n', '<C-j>', ':move +1<CR>') -- move line down
-vim.keymap.set('n', '<C-k>', ':move -2<CR>') -- move line up
+keymap.set('n', '<C-j>', ':move +1<CR>') -- move line down
+keymap.set('n', '<C-k>', ':move -2<CR>') -- move line up
+keymap.set('n', '<leader>h', '<C-w>h', opts) -- move line up
+keymap.set('n', '<leader>l', '<C-w>l', opts) -- move line up
 
 -- Modify yank ------------------------------------------------------------------------------------------------------------------
-vim.keymap.set('n', 'p', 'pgvy', { noremap = true, silent = true}) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 
--- Indent -----------------------------------------------------------------------------------------------------------------------
+keymap.set('n', 'p', 'pgvy', { noremap = true, silent = true}) -- "p" now is mapped to "pgvy" so it yanks latest pasted line 

@@ -10,15 +10,16 @@ keymap.set('n', '<leader>f', ':Neotree action=focus<CR>')
 keymap.set('n', '<', '<gv')
 keymap.set('n', '>', '>gv')
 
--- Indent -----------------------------------------------------------------------------------------------------------------------
-keymap.set('n', '<leader>sv', ':vsplit<CR>', opts)
-keymap.set('n', '<leader>sh', ':split<CR>', opts)
+-- Split Windows -----------------------------------------------------------------------------------------------------------------
+keymap.set('n', '<leader>sv', ':vsplit<CR>', opts) -- Split Vertical
+keymap.set('n', '<leader>sh', ':split<CR>', opts) -- Split Horizontal
 
 -- Remap Move -------------------------------------------------------------------------------------------------------------------
 keymap.set('n', '<C-j>', ':move +1<CR>') -- move line down
 keymap.set('n', '<C-k>', ':move -2<CR>') -- move line up
-keymap.set('n', '<leader>h', '<C-w>h', opts) -- move line up
-keymap.set('n', '<leader>l', '<C-w>l', opts) -- move line up
+keymap.set('n', '<leader>h', '<C-w>h', opts) -- Change Focus to left pane
+keymap.set('n', '<leader>l', '<C-w>l', opts) -- change Focus to right pane
+keymap.set('n', '<C-w>', ':w<CR>', opts) -- move line up
 keymap.set('n', '<leader>q', ':wq<CR>', opts) -- move line up
 -- keymap.set('n', '<leader>qq', ':wqa<CR>', opts) -- move line up
 

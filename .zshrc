@@ -1,7 +1,7 @@
 if [ -z "$TMUX" ];then
     SESSION_NAME="Main"
      typeset -A WINDOW_DIRS=(
-        ["Cribl"]="/home/$USER/Proyectos/Cyber/Cribl"
+        #["Cribl"]="/home/$USER/Proyectos/Cyber/Cribl"
         ["k8s-Cluster"]="/home/$USER/Proyectos/Cyber/kubernetes/k8s-proxmox"
         ["Falco"]="/home/$USER/Proyectos/Cyber/Falco"
         ["Postman"]="/home/$USER/Tools/Postman"

@@ -95,6 +95,7 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-# kubectl
+# Completions
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+source <(fzf --zsh)

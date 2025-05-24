@@ -84,6 +84,7 @@ export TERM=xterm-256color
 alias vim=/opt/nvim-linux64/bin/nvim
 alias ls=/usr/bin/lsd
 alias cat=/usr/bin/batcat
+alias fzf=/opt/fzf/rfv
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

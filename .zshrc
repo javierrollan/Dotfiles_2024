@@ -1,13 +1,13 @@
 if [ -z "$TMUX" ];then
     SESSION_NAME="Main"
      typeset -A WINDOW_DIRS=(
-        #["Cribl"]="/home/$USER/Proyectos/Cyber/Cribl"
-        ["k8s-Cluster"]="/home/$USER/Proyectos/Cyber/kubernetes/k8s-proxmox"
+        ["Cyber"]="/home/$USER/Proyectos/Cyber"
         ["Falco"]="/home/$USER/Proyectos/Cyber/Falco"
-        ["Postman"]="/home/$USER/Tools/Postman"
+        ["Ansible"]="/home/$USER/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
+        ["Terraform"]="/home/$USER/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/terraform-playbooks"
+        #["Postman"]="/home/$USER/Tools/Postman"
         ["NVIM"]="/home/$USER/.config/nvim"
         ["System"]="/home/$USER/Proyectos/Scripts"
-        ["Cyber"]="/home/$USER/Proyectos/Cyber"
     )
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then
         tmux new-session -d -s "$SESSION_NAME" -n "Home"

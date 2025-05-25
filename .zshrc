@@ -1,6 +1,7 @@
 if [ -z "$TMUX" ];then
     SESSION_NAME="Main"
-     typeset -A WINDOW_DIRS=(
+    WINDOW_ORDER=("Cyber" "Falco" "Ansible" "Terraform" "NVIM" "System")
+    typeset -A WINDOW_DIRS=(
         ["Cyber"]="/home/$USER/Proyectos/Cyber"
         ["Falco"]="/home/$USER/Proyectos/Cyber/Falco"
         ["Ansible"]="/home/$USER/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
@@ -12,7 +13,9 @@ if [ -z "$TMUX" ];then
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then
         tmux new-session -d -s "$SESSION_NAME" -n "Home"
         window_index=1
-        for window_name dir in "${(@kv)WINDOW_DIRS}";do
+        #for window_name dir in "${(@kv)WINDOW_DIRS}";do
+        for window_name in "${WINDOW_ORDER[@]}";do
+            dir="${WINDOW_DIRS[$window_name]}"
             tmux new-window -t "$SESSION_NAME" -n "$window_name"
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $dir" C-m
             tmux send-keys -t "$SESSION_NAME:$window_index.0" "clear" C-m

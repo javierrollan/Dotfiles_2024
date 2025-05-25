@@ -103,6 +103,15 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#51576D \
 --color=border:#414559,label:#C6D0F5"
 
+# Key binds
+function my_custom_command() {
+  zle -I  # reset prompt
+  print -s "echo Hello from shortcut"  # save to history
+  echo "Hello from shortcut"
+}
+zle -N my_custom_command
+bindkey '^G' my_custom_command
+
 # Completions
 source <(kubectl completion zsh)
 source <(helm completion zsh)

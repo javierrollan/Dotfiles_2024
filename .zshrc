@@ -104,7 +104,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=border:#414559,label:#C6D0F5"
 
 # Key binds
-bindkey '^G' 'git status'
+bindkey -s '^G' 'git status\n' # git status mapped to ctrl+g
 
 # Completions
 source <(kubectl completion zsh)

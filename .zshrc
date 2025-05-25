@@ -105,6 +105,8 @@ export FZF_DEFAULT_OPTS=" \
 
 # Key binds
 bindkey -s '^G' 'git status\n' # git status mapped to ctrl+g
+bindkey -s '^F' 'rfv\n' # rfv script mapped to ctrl+f
+bindkey -s '^H' 'htop\n' # htop mapped to ctrl+h
 
 # Completions
 source <(kubectl completion zsh)

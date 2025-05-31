@@ -25,13 +25,13 @@ if [ -z "$TMUX" ];then
                 tmux splitw -bf
                 tmux splitw -fh
                 tmux splitw -b
-                tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd /home/$USER/Tools/Scripts/FileSync" C-m
+                tmux send-keys -t "$SESSION_NAME:$window_index.0" "cd $HOME/Tools/Scripts/FileSync" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.0" "clear" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.0" "./file-sync.sh" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.1" "htop" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.2" "cd $dir" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.2" "clear" C-m
-                tmux send-keys -t "$SESSION_NAME:$window_index.3" "cd /home/$USER/Proyectos/BlueTeamHero" C-m
+                tmux send-keys -t "$SESSION_NAME:$window_index.3" "cd $HOME/Proyectos/BlueTeamHero" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.3" "export FLASK_APP=app.py" C-m
                 tmux send-keys -t "$SESSION_NAME:$window_index.3" "flask run --host=192.168.1.51 --port=5000 --debug" C-m
             fi

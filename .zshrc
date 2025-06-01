@@ -2,13 +2,13 @@ if [ -z "$TMUX" ];then
     SESSION_NAME="Main"
     WINDOW_ORDER=("Cyber" "Falco" "Ansible" "Terraform" "NVIM" "System")
     typeset -A WINDOW_DIRS=(
-        ["Cyber"]="/home/$USER/Proyectos/Cyber"
-        ["Falco"]="/home/$USER/Proyectos/Cyber/Falco"
-        ["Ansible"]="/home/$USER/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
-        ["Terraform"]="/home/$USER/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/terraform-playbooks"
-        #["Postman"]="/home/$USER/Tools/Postman"
-        ["NVIM"]="/home/$USER/.config/nvim"
-        ["System"]="/home/$USER/Proyectos/Scripts"
+        ["Cyber"]="$HOME/Proyectos/Cyber"
+        ["Falco"]="$HOME/Proyectos/Cyber/Falco"
+        ["Ansible"]="$HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
+        ["Terraform"]="$HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/terraform-playbooks"
+        ["NVIM"]="$HOME/.config/nvim"
+        ["System"]="$HOME/Proyectos/Scripts"
+        #["Postman"]="$HOME/Tools/Postman"
     )
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then
         tmux new-session -d -s "$SESSION_NAME" -n "Home"
@@ -88,6 +88,8 @@ alias vim=/opt/nvim-linux64/bin/nvim
 alias ls=/usr/bin/lsd
 alias cat=/usr/bin/batcat
 alias rfv=/opt/fzf/rfv2
+alias ansible_playbooks="cd $HOME/Proyectos/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
+alias terraform_playbooks="cd $HOME/Proyectos/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

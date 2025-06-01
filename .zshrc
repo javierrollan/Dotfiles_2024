@@ -8,7 +8,7 @@ if [ -z "$TMUX" ];then
         ["Terraform"]="$HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/terraform-playbooks"
         ["NVIM"]="$HOME/.config/nvim"
         ["System"]="$HOME/Proyectos/Scripts"
-        #["Postman"]="$HOME/Tools/Postman"
+        ["k8sLens"]="$HOME/Tools"
     )
     if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null;then
         tmux new-session -d -s "$SESSION_NAME" -n "Home"

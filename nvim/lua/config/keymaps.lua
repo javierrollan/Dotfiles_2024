@@ -13,8 +13,9 @@ keymap.set('n', '>', '>gv')
 -- Split Windows -----------------------------------------------------------------------------------------------------------------
 keymap.set('n', '<leader>sv', ':vsplit<CR>', opts) -- Split Vertical
 keymap.set('n', '<leader>sh', ':split<CR>', opts) -- Split Horizontal
-keymap.set('n', '<leader>+', '<C-w>|', opts) -- Zoom Split Horizontal
-keymap.set('n', '<leader>-', '<C-w>=', opts) -- Exit Zoom Split Horizontal
+keymap.set('n', '<leader>v+', '<C-w>|', opts) -- Zoom Split Vertical
+keymap.set('n', '<leader>h+', '<C-w>_', opts) -- Zoom Split Horizontal
+keymap.set('n', '<leader>-', '<C-w>=', opts) -- Exit Zoom Split 
 
 -- Remap Move -------------------------------------------------------------------------------------------------------------------
 keymap.set('n', '<C-j>', ':move +1<CR>') -- move line down

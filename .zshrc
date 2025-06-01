@@ -88,8 +88,8 @@ alias vim=/opt/nvim-linux64/bin/nvim
 alias ls=/usr/bin/lsd
 alias cat=/usr/bin/batcat
 alias rfv=/opt/fzf/rfv2
-alias ansible_playbooks="cd $HOME/Proyectos/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
-alias terraform_playbooks="cd $HOME/Proyectos/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
+alias ansible_playbooks="cd $HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
+alias terraform_playbooks="cd $HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/terraform-playbooks"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

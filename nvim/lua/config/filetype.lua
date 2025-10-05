@@ -5,6 +5,7 @@ vim.filetype.add({
         [".*/handlers/.*.yaml"]     = "yaml.ansible",
         [".*/ansible/.*.yaml"]      = "yaml.ansible",
         [".*.yaml.j2"]              = "yaml",
+        [".*.trace.*"]              = "strace",
         [".*.trace"]                = "strace"
     }
 })

@@ -1,9 +1,10 @@
 if [ -z "$TMUX" ];then
     SESSION_NAME="Main"
-    WINDOW_ORDER=("Cyber" "Falco" "Ansible" "Terraform" "NVIM" "System" "Tools")
+    WINDOW_ORDER=("Cyber" "Falco" "Blog" "Ansible" "Terraform" "NVIM" "System" "Tools")
     typeset -A WINDOW_DIRS=(
         ["Cyber"]="$HOME/Proyectos/Cyber"
         ["Falco"]="$HOME/Proyectos/Cyber/Falco"
+        ["Blog"]="$HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Blog"
         ["Ansible"]="$HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
         ["Terraform"]="$HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/terraform-playbooks"
         ["NVIM"]="$HOME/.config/nvim"

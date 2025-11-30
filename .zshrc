@@ -91,6 +91,7 @@ alias cat=/usr/bin/batcat
 alias rfv=/opt/fzf/rfv2
 alias ansible_playbooks="cd $HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/ansible-playbooks"
 alias terraform_playbooks="cd $HOME/Proyectos/Cyber/Praetor-Cybersecurity/Praetor-Cybersecurity-Infrastructure/terraform-playbooks"
+alias trufflehog="$HOME/Tools/trufflehog/trufflehog"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
